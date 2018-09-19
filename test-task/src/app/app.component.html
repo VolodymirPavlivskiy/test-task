@@ -1,0 +1,121 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="first-block">
+    <div class="left-block">
+      <img src="https://endotech.io/img/coinicon/BTC.png" />
+      <p class="color-green" >BTC</p>
+    </div>
+    <div (click)="onChangeCoin()" class="right-block">
+      <div class="margin-top" >
+        <p>
+          USD:
+        </p>
+        <p>
+          UAH:
+        </p>
+        <p>
+          RUB:
+        </p>
+      </div>
+      <div class="margin-top margin-left">
+          <p>
+              USD:
+            </p>
+            <p>
+              UAH:
+            </p>
+            <p>
+              RUB:
+            </p>
+      </div>
+    </div>
+  </div>
+  <div class="first-block">
+      <div class="left-block">
+        <img src="https://endotech.io/img/coinicon/ETH.png" />
+        <p class="color-green" >ETH</p>
+      </div>
+      <div class="right-block">
+        <div class="margin-top" >
+          <p>
+            USD:
+          </p>
+          <p>
+            UAH:
+          </p>
+          <p>
+            RUB:
+          </p>
+        </div>
+        <div class="margin-top margin-left">
+            <p>
+                USD:
+              </p>
+              <p>
+                UAH:
+              </p>
+              <p>
+                RUB:
+              </p>
+        </div>
+      </div>
+    </div>
+    <div class="first-block">
+        <div class="left-block">
+          <img src="https://endotech.io/img/coinicon/XRP.png" />
+          <p class="color-green" >XRP</p>
+        </div>
+        <div class="right-block">
+          <div class="margin-top" >
+            <p>
+              USD:
+            </p>
+            <p>
+              UAH:
+            </p>
+            <p>
+              RUB:
+            </p>
+          </div>
+          <div class="margin-top margin-left">
+              <p>
+                  USD:
+                </p>
+                <p>
+                  UAH:
+                </p>
+                <p>
+                  RUB:
+                </p>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="choose-coin">
+  <p class="selected-coin">
+    Selected coin: {{ selected }}
+  </p>
+  <div class="display size-block" >
+    <div class="float-right">
+      <span>Volume: </span>
+    </div>
+    <div class="size">
+      <input [(ngModel)]="quentity" class="size-input" type="text" #name="ngModel" />
+    </div>
+    
+  </div>
+  <div class="display margin-top-block">
+    <div (click)="getMoney('UAH')" [ngStyle]="{'backgroundColor': money === 'UAH' ? buttonColor : null}" class="money">
+      <p [ngStyle]="{'color': money === 'UAH' ? textColor : null}">UAH</p>
+    </div>
+    <div (click)="getMoney('USD')" [ngStyle]="{'backgroundColor': money === 'USD' ? buttonColor : null}" class="money">
+      <p [ngStyle]="{'color': money === 'USD' ? textColor : null}">USD</p>
+    </div>
+    <div (click)="getMoney('RUB')" [ngStyle]="{'backgroundColor': money === 'RUB' ? buttonColor : null}" class="money">
+      <p [ngStyle]="{'color': money === 'RUB' ? textColor : null}">RUB</p>
+    </div>
+  </div>
+</div>
+<div>
+  <p class="color-green font-size-one" >{{quentity}} {{ selected }} will be {{ myMoney }} in {{money}}</p>
+</div>
