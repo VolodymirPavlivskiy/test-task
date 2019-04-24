@@ -12,7 +12,7 @@
     ],
     "curly": true,
     "deprecation": {
-      "severity": "warn"
+      "severity": "warn"   
     },
     "eofline": true,
     "forin": true,
